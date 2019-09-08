@@ -1,0 +1,35 @@
+<%= form_for(class_report) do |f| %>
+  <% if class_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(class_report.errors.count, "error") %> prohibited this class_report from being saved:</h2>
+
+      <ul>
+      <% class_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+   <%= form_for @class_report do |f| %>
+    <p>
+      <%= f.label :student_name %>
+      <%= f.text_field :student_name %>
+    </p>
+    <p>
+      <%= f.label :student_level %>
+      <%= f.number_field :student_level %>
+    </p>
+    <p>
+      <%= f.label :class_notes %>
+      <%= f.text_field :class_notes %>
+    </p>
+    <p>
+      <%= f.label :earnings %>
+      <%= f.number_field :earnings, step: 0.1 %>
+    </p>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :class_reports
   get 'pages/dashboard', to: 'pages#dashboard', as: :dashboard
   root 'pages#index'
 
