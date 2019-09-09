@@ -11,7 +11,7 @@ Basic Functions:
     - after entering in the data, if a unique
 * FeedbackReport
 * Payment Display/Tracker
-
+* Calendar - try to use Google Calendar API
 Things you may want to cover:
 
 * Ruby version

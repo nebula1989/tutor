@@ -25,6 +25,7 @@ class ClassReportsController < ApplicationController
   # POST /class_reports.json
   def create
     @class_report = ClassReport.new(class_report_params)
+    
 
     respond_to do |format|
       if @class_report.save
