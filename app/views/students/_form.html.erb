@@ -11,7 +11,33 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= form_for @student do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :age %>
+      <%= f.number_field :age %>
+    </p>
+    <p>
+      <%= f.label :level %>
+      <%= f.number_field :level %>
+    </p>
+    <p>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </p>
+    <p>
+      <%= f.label :birthday %>
+      <%= f.date_field :birthday %>
+    </p>
+    <p>
+      <%= f.label :strength_weak %>
+      <%= f.text_field :strength_weak %>
+    </p>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
 <% end %>

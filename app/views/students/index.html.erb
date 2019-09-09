@@ -10,8 +10,24 @@
   </thead>
 
   <tbody>
-    <% @students.each do |student| %>
+    <tr>
+       <td>Name</td>
+       <td>Age</td>
+       <td>Level</td>
+       <td>Location</td>
+       <td>Birthday</td>
+       <td>Strength_Weak</td>
+       <td>Teacher_ID</td>
+    </tr>
+    <% @student.each do |student| %>
       <tr>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+        <td><%= student.level %></td>
+        <td><%= student.location %></td>
+        <td><%= student.birthday %></td>
+        <td><%= student.strength_weak %></td>
+        <td><%= student.user_id %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
