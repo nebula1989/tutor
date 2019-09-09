@@ -4,7 +4,7 @@ class ClassReportsController < ApplicationController
   # GET /class_reports
   # GET /class_reports.json
   def index
-    @class_reports = ClassReport.all
+    @class_report = current_user.class_reports
   end
 
   # GET /class_reports/1
@@ -25,6 +25,7 @@ class ClassReportsController < ApplicationController
   # POST /class_reports.json
   def create
     @class_report = ClassReport.new(class_report_params)
+    @class_report.user = current_user
     
 
     respond_to do |format|
