@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
+  
+
   resources :students
   resources :class_reports
+  get 'earnings/index', to: 'earnings#index', as: :earnings
   get 'pages/dashboard', to: 'pages#dashboard', as: :dashboard
   root 'pages#index'
 
