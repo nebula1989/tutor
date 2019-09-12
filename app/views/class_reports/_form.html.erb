@@ -30,7 +30,11 @@
     </p>
     <p>
       <%= f.label :date_of_class %>
-      <%= f.date_field :date_of_class %>
+      <%= f.date_select :date_of_class %>
+    </p>
+    <p>
+      <%= f.label :time_of_class %>
+      <%= f.time_select :date_of_class, :ignore_date => true %>
     </p>
     <div class="actions">
       <%= f.submit %>
