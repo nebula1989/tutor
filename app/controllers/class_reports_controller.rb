@@ -4,11 +4,19 @@ class ClassReportsController < ApplicationController
   # GET /class_reports
   # GET /class_reports.json
   def index
-    @dates_otions = []
+    @dates_options = []
     12.times do |i| 
       date = Date.today.beginning_of_year + i.month
-      @dates_otions << [date, date]
+      @dates_options << [date, date]
+    
+    
+    @sum_options = []
+      today = Date.today
+      yesterday = Date.yesterday
+      @dates_options << [today, yesterday]
     end
+    
+    
     @class_reports = current_user.class_reports
     if params[:month].present?
       @class_reports = current_user.class_reports.where(date_of_class: Date.parse(params[:month]).beginning_of_month ..  Date.parse(params[:month]).end_of_month)
