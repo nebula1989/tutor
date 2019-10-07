@@ -2,6 +2,11 @@
 
 <h1>Class Reports</h1>
 
+<%= form_tag "/class_reports", method: :get do %>
+  <%= select_tag "month", options_for_select(@dates_otions) %>
+  <%= submit_tag "Filter Class Reports" %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -17,7 +22,7 @@
       <th>Earnings</th>
       <th>Lesson Date</th>
    </tr>
-    <% @class_report.each do |class_report| %>
+    <% @class_reports.each do |class_report| %>
       <tr>
         <td><%= class_report.student_name %></td>
         <td><%= class_report.student_level %></td>
