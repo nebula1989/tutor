@@ -4,7 +4,7 @@ class ClassReportsController < ApplicationController
   # GET /class_reports
   # GET /class_reports.json
   def index
-    @sum_earnings = ClassReport.sum(:earnings)
+    
     @dates_otions = []
     12.times do |i| 
       date = Date.today.beginning_of_year + i.month
@@ -13,6 +13,7 @@ class ClassReportsController < ApplicationController
     @class_reports = current_user.class_reports
     if params[:month].present?
       @class_reports = current_user.class_reports.where(date_of_class: Date.parse(params[:month]).beginning_of_month ..  Date.parse(params[:month]).end_of_month)
+      @sum_earnings = current_user.class_reports.where(date_of_class: Date.parse(params[:month]).beginning_of_month ..  Date.parse(params[:month]).end_of_month).pluck(:earnings).sum
     end
   end
 
