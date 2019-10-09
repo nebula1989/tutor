@@ -4,6 +4,7 @@ class ClassReportsController < ApplicationController
   # GET /class_reports
   # GET /class_reports.json
   def index
+    @sum_earnings = ClassReport.sum(:earnings)
     @dates_otions = []
     12.times do |i| 
       date = Date.today.beginning_of_year + i.month
