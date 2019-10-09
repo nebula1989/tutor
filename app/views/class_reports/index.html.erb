@@ -7,10 +7,6 @@
   <%= submit_tag "Filter Class Reports" %>
 <% end %>
 
-<%= form_tag "/class_reports", method: :get do %>
-  <%= select_tag "sum", options_for_select(@sum_options) %>
-  <%= submit_tag "Filter Sum Earnings" %>
-<% end %>
 
 <table>
   <thead>
