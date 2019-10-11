@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>Student Name</th>
+      <th>Level</th>
+      <th>TaughtBy</th>
+      <th>Earnings</th>
+      <th>Lesson Date</th>
+   </tr>
+    <% @class_reports.each do |class_report| %>
+      <tr>
+        <td><%= class_report.student_name %></td>
+        <td><%= class_report.student_level %></td>
+        <td><%= class_report.user_id %></td>
+        <td><%= class_report.earnings %></td>
+        <td><%= class_report.date_of_class %></td>
+        <td><%= link_to 'Show', class_report %></td>
+        <td><%= link_to 'Edit', edit_class_report_path(class_report) %></td>
+        <td><%= link_to 'Destroy', class_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
