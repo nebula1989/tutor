@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Added Gems
 gem 'clearance'
 gem 'kaminari'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 
 
 group :development, :test do
