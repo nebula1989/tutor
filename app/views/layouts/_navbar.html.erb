@@ -6,8 +6,16 @@
       <li class="nav-item">
         <%= link_to 'Dashboard', dashboard_path, class:'nav-link' %>
       </li>
-      <li>
-        <%= render 'layouts/login_notice'%>
-      </li>
   </div>
+  
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <%= render 'layouts/login_notice'%>
+            </li>
+        </ul>
+    </div>
+  
 </nav>
+
+
