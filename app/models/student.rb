@@ -1,4 +1,4 @@
 class Student < ApplicationRecord
   belongs_to :user
-  validates :name, :level, presence: true
+  validates :name, :level, presence: true, uniqueness: true
 end
