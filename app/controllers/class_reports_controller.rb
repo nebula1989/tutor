@@ -11,6 +11,7 @@ class ClassReportsController < ApplicationController
       @dates_otions << [date, date]
     end
     @class_reports = current_user.class_reports.order('date_of_class DESC').page params[:page]
+    @sum_all_earnings = current_user.class_reports.pluck(:earnings).sum
     if params[:month].present?
       @class_reports = current_user.class_reports.order('date_of_class').where(date_of_class: Date.parse(params[:month]).beginning_of_month ..  Date.parse(params[:month]).end_of_month).page params[:page]
       @sum_earnings = current_user.class_reports.where(date_of_class: Date.parse(params[:month]).beginning_of_month ..  Date.parse(params[:month]).end_of_month).pluck(:earnings).sum
