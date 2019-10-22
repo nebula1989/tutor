@@ -11,4 +11,14 @@
  * It is generally better to create a new file per style scope.*/
 
 //Custom bootstrap variables must be set or added *before* bootstrap
-@import "bootstrap"; 
+@import "bootstrap";
+@import "rails_bootstrap_forms";
+
+.center_div{
+    margin: 0 auto;
+    width:40% /* value of your choice which suits your alignment */
+}
+
+.dark-background {
+  background-color: #b8cbcd;
+}

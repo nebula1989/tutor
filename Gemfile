@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'clearance'
 gem 'kaminari'
 gem 'bootstrap', '~> 4.3.1'
+gem "bootstrap_form", "~> 4.0"
 
 
 group :development, :test do
