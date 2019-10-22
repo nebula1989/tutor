@@ -1,14 +1,12 @@
-<div class="container center_div dark-background">
-  <%= bootstrap_form_for(:session, url: session_path) do |f| %>
-    <%= f.email_field :email %>
-    <%= f.password_field :password %>
-    <%= f.check_box :remember_me %>
-    <%= f.submit "Log In" %>
-    <div class="other-links">
-      <% if Clearance.configuration.allow_sign_up? %>
-        <%= link_to t(".sign_up"), sign_up_path%>
-      <% end %><br>
-      <%= link_to t(".forgot_password"), new_password_path%>
-    </div>
-  <% end %>
-</div>
+<%= bootstrap_form_for(:session, url: session_path) do |f| %>
+  <%= f.email_field :email %>
+  <%= f.password_field :password %>
+  <%= f.check_box :remember_me %>
+  <%= f.submit "Log In" %>
+  <div class="other-links">
+    <% if Clearance.configuration.allow_sign_up? %>
+      <%= link_to t(".sign_up"), sign_up_path%>
+    <% end %><br>
+    <%= link_to t(".forgot_password"), new_password_path%>
+  </div>
+<% end %>
