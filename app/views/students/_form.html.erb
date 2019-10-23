@@ -1,6 +1,7 @@
 <%= render 'error' %>
 <%= form_for(student) do |f| %>
   <div class="sign-in container center_div dark-background">
+    <h1>New Student</h1>
     <%= bootstrap_form_for(@student) do |f| %>
       <p>
         <%= f.text_field :name %>
