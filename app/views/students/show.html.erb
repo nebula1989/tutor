@@ -1,4 +1,27 @@
 <p id="notice"><%= notice %></p>
+<%-# this is the student's profile and should have a nice looking table with student info and pic -%>
 
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Location</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Strength_Weakness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @student.name %></td>
+      <td><%= @student.age %></td>
+      <td><%= @student.level %></td>
+      <td><%= @student.location %></td>
+      <td><%= @student.birthday %></td>
+      <td><%= @student.strength_weak %></td>
+    </tr>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
