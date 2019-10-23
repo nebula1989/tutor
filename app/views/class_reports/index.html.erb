@@ -1,8 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-
-<h1>Class Reports</h1>
-
 <%= form_tag "/class_reports", method: :get do %>
   <%= select_tag "month", options_for_select(@dates_otions) %>
   <%= submit_tag "Filter Class Reports" %>

@@ -1,43 +1,41 @@
-<%= form_for(class_report) do |f| %>
-  <% if class_report.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(class_report.errors.count, "error") %> prohibited this class_report from being saved:</h2>
-
-      <ul>
-      <% class_report.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="center_div dark-background">
+  <h1>New Class Report</h1>
+  <%= form_for(class_report) do |f| %>
+    <% if class_report.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(class_report.errors.count, "error") %> prohibited this class_report from being saved:</h2>
   
-   <%= form_for @class_report do |f| %>
-    <p>
-      <%= f.label :student_name %>
-      <%= f.text_field :student_name %>
-    </p>
-    <p>
-      <%= f.label :student_level %>
-      <%= f.number_field :student_level %>
-    </p>
-    <p>
-      <%= f.label :class_notes %>
-      <%= f.text_field :class_notes %>
-    </p>
-    <p>
-      <%= f.label :earnings %>
-      <%= f.number_field :earnings, step: 0.1 %>
-    </p>
-    <p>
-      <%= f.label :date_of_class %>
-      <%= f.date_select :date_of_class %>
-    </p>
-    <p>
-      <%= f.label :time_of_class %>
-      <%= f.time_select :date_of_class, :ignore_date => true %>
-    </p>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+        <ul>
+        <% class_report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+     <%= bootstrap_form_for(@class_report) do |f| %>
+      <p>
+        <%= f.text_field :student_name %>
+      </p>
+      <p>
+        <%= f.number_field :student_level %>
+      </p>
+      <p>
+        <%= f.text_field :class_notes %>
+      </p>
+      <p>
+        <%= f.number_field :earnings, step: 0.1 %>
+      </p>
+      <p>
+        <%= f.date_select :date_of_class %>
+      </p>
+      <p>
+        <%= f.label :time_of_class %>
+        <%= f.time_select :date_of_class, :ignore_date => true %>
+      </p>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
