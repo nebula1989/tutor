@@ -1,43 +1,31 @@
+<%= render 'error' %>
 <%= form_for(student) do |f| %>
-  <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= form_for @student do |f| %>
-    <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.label :age %>
-      <%= f.number_field :age %>
-    </p>
-    <p>
-      <%= f.label :level %>
-      <%= f.number_field :level %>
-    </p>
-    <p>
-      <%= f.label :location %>
-      <%= f.text_field :location %>
-    </p>
-    <p>
-      <%= f.label :birthday %>
-      <%= f.date_field :birthday %>
-    </p>
-    <p>
-      <%= f.label :strength_weak %>
-      <%= f.text_field :strength_weak %>
-    </p>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+  <div class="sign-in container center_div dark-background">
+    <%= bootstrap_form_for(@student) do |f| %>
+      <p>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.number_field :age %>
+      </p>
+      <p>
+        <%= f.number_field :level %>
+      </p>
+      <p>
+        <%= f.text_field :location %>
+      </p>
+      <p>
+        <%= f.date_field :birthday %>
+      </p>
+      <p>
+        <%= f.text_field :strength_weak %>
+      </p>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+      <div class="btn">
+        <%= link_to 'Cancel / Go Back', students_path %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
