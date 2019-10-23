@@ -1,19 +1,24 @@
-<div id="show_box">
-  <table>
-      <tr>
-        <th>Class Date</th>
-        <th>Student</th>
-        <th>Class Notes</th>
-        <th>You Earned</th>
-      </tr>
-      <tr>
-        <td><%= @class_report.date_of_class %></td>
-        <td><%= @class_report.student_name %></td>
-        <td><%= @class_report.class_notes %></td>
-        <td><%= @class_report.earnings %></td>
-      </tr>
-  </table>
-</div>
+<p id="notice"><%= notice %></p>
 
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Class Date</th>
+      <th scope="col">Student</th>
+      <th scope="col">Class Notes</th>
+      <th scope="col">You Earned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @class_report.date_of_class %></td>
+      <td><%= @class_report.student_name %></td>
+      <td><%= @class_report.class_notes %></td>
+      <td><%= @class_report.earnings %></td>
+    </tr>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_class_report_path(@class_report) %> |
 <%= link_to 'Back', class_reports_path %>
+
+
