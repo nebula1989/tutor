@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-lightn", style="box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);">
   <%= link_to 'TutorSidekick', root_path, class:'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,8 +14,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'Dashboard', dashboard_path, class:'nav-link' %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dashboard
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="text-align: center;">
+          <a class="dropdown-item"><%= link_to "Class Reports", class_reports_path %></a>
+          <a class="dropdown-item" href="#"><%= link_to "Students", students_path %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"><%= link_to 'Dashboard Home', dashboard_path %></a>
+        </div>
       </li>
   </div>
 </nav>
