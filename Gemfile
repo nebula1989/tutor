@@ -40,6 +40,7 @@ gem 'clearance'
 gem 'kaminari'
 gem 'bootstrap', '~> 4.3.1'
 gem "bootstrap_form", "~> 4.0"
+gem "font-awesome-rails"
 
 
 group :development, :test do
