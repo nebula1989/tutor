@@ -17,3 +17,16 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main-dashboard").style.marginLeft = "200px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main-dashboard").style.marginLeft= "0";
+}
